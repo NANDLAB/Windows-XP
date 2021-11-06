@@ -263,12 +263,19 @@ StScrollBar StButton#vhandle:hover {
   height: 30px;
 }
 
-#panelLeft, #panelCenter {
+#panelLeft {
+  spacing: 4px;
+}
+#panelCenter {
   spacing: 4px;
 }
 
 #panelRight {
   border-image: url('panel-right.png') 7 0 0 0;
+}
+
+#panelLeft .applet-box {
+  padding-left: 0px;
 }
 
 #panelLeft .applet-box:first-child {
@@ -279,6 +286,7 @@ StScrollBar StButton#vhandle:hover {
   font-style: italic;
   font-weight: bold;
   font-family: tahoma;
+  padding-left: 6px;
   padding-right: 15px;
 }
 
@@ -1942,6 +1950,12 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
 * Panel Launchers Applet (panelLaunchers.js)
 * ===================================================================*/
 
+.panel-launchers {
+    margin-left: 0px;
+    padding-left: 0px; /* padding-left: 7px; */
+    spacing: 2px;
+}
+
 #panel-launchers-box {
 
 }
@@ -1949,6 +1963,11 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
 .panel-launcher {
   margin: 1px;
   padding: 3px;
+}
+
+.panel-launchers .applet-box {
+  margin: 0px;
+  padding-left: 0px;
 }
 
 .panel-launcher:hover {
@@ -2027,10 +2046,11 @@ height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 
 }
 
 .applet-box {
-  padding-left: 6px;
+  padding-left: 6px; /* 6px; */
   padding-right: 6px;
   transition-duration: 300;
 }
+
 .applet-box:hover {
   background-color: rgba(25,25,25,0.2);
   color:  white;
